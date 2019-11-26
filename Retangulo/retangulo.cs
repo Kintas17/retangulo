@@ -8,22 +8,17 @@ namespace Retangulo
 {
     class retangulo
     {
-        private double valor;
-        private double valor2;
-
-        public string recebe
+        private double _a, _l; // _a -> altura; _l -> Largura
+        public string altura
         {
-            set
-            {
-                valor = Convert.ToDouble(value)* valor2;
-            }
+            set => _a = Convert.ToDouble(value);
         }
-        public string envia
+        public string largura
         {
-            get
-            {
-               return valor.ToString();
-            }
+            set => _l = Convert.ToDouble(value);
         }
+        public string Area =>(_a * _l).ToString();
+        public string Perimetro => ((_a + _l)*2).ToString();
+        public string Diagonal =>Math.Sqrt(_a*_a + _l*_l).ToString();
     }
 }

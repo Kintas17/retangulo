@@ -25,8 +25,16 @@ namespace Retangulo
         retangulo cunha = new retangulo();
         private void Button1_Click(object sender, EventArgs e)
         {
-            cunha.recebe = textBox1.Text;
-            label1.Text = cunha.envia;
+            cunha.altura = textBox1.Text;
+            cunha.largura = textBox2.Text;
+            if (radioButton1.Checked) label1.Text = cunha.Area;
+            else if (radioButton2.Checked) label1.Text = cunha.Perimetro;
+            else if (radioButton3.Checked)label1.Text = cunha.Diagonal;
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
